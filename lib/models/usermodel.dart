@@ -14,11 +14,11 @@ class Userdata {
   final String avatar;
 
   factory Userdata.fromJson(Map<String, dynamic> json) =>
-      Userdata(id: json["id"],
-          email: json["email"],
-          first_name: json["first_name"],
-          last_name: json["last_name"],
-          avatar: json["avatar"]);
+      Userdata(id: json["id"]?? "",
+          email: json["email"]?? "",
+          first_name: json["first_name"]?? "",
+          last_name: json["last_name"]?? "",
+          avatar: json["avatar"]?? "");
 
   Map<String, dynamic> toJson() => {
     "id": id,

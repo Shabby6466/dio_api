@@ -5,7 +5,7 @@ class User{
   User({required this.data});
   
   factory User.fromJson(Map<String, dynamic>json)=>
-    User(data: Userdata.fromJson(json["data"]));
+    User(data: Userdata.fromJson(json["data"]?? ""));
 
   Map<String, dynamic> toJson() => {
   "data" : data.toJson(),
