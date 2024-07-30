@@ -1,16 +1,16 @@
 class Userinfo {
   final String name;
   final String job;
-  final String? id;
-  final String? createdAt;
-  final String? updatedAt;
+  final String id;
+  final String createdAt;
+  final String updatedAt;
 
   Userinfo(
       {required this.name,
       required this.job,
-      this.id,
-      this.createdAt,
-      this.updatedAt});
+      required this.id,
+      required this.createdAt,
+      required this.updatedAt});
 
   factory Userinfo.fromJson(Map<String, dynamic> json) => Userinfo(
       name: json['name'] ?? "",
